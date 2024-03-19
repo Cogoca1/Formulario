@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nuevo.css">
+    <script defer src="nuevo.js"></script>
+</head>
+
+<body>
+    <h1>FORMULARIO</h1>
+
+    <form action="">
+
+        <p>Usuario: Entre 3 y 25 caracteres</p>
+        <input type="text" name="usuario" onblur="validarUsuario(this)" placeholder="Usuario"><span id="usuario"></span>
+        <p>Contraseña: Al menos 8 caracteres y una letra en mayúsculas, una minúscula y un digito</p>
+
+        <input type="password" name="password" onblur="validarContraseña(this)" placeholder="Password"><span
+            id="contraseña"></span>
+        <p>Confirmar Contraseña: Debe coincidir con la contraseña ingresada anteriormente</p>
+
+        <input type="password" name="confirm_password" onblur="validarConfirmacionContraseña(this)"
+            placeholder="Confirmar password"><span id="confirmar_contraseña"></span>
+        <p>Email: Tipo dirección email</p>
+
+        <input type="email" name="email" onblur="validarEmail(this)" placeholder="Email"><span id="email"></span>
+        <p>Nombre: Minimo 3 letras</p>
+
+        <input type="text" name="nombre" onblur="validarNombre(this)" placeholder="Nombre"><span id="nombre"></span>
+        <p>Apellidos: Mínimo 2 palabras de al menos 3 letras cada una</p>
+
+        <input type="text" name="apellidos" onblur="validarApellidos(this)" placeholder="Apellidos"><span
+            id="apellidos"></span>
+
+        <p>Dirección (textarea): Mínimo que contenta un CP de 5 digitos, y
+            nos muestra una alerta las condiciones de validación en un alert con el
+            siguiente formato: Dirección, Población, CP y Provincia, separado por comas. </p>
+
+        <textarea onblur="validarCP()" name="texto" id="cpInput" cols="30" rows="10"
+            placeholder="Formato: Dirección \nCP \nPoblación \nProvincia "></textarea>
+
+        <input type="submit"><span id="enviar"></span>
+    </form>
+
+    <div class="frog"></div>
+
+
+
+</body>
+
+</html>

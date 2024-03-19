@@ -1,0 +1,151 @@
+html,
+body {
+    background-color: #e1e0ac;
+    background-image: linear-gradient(30deg, #434d47 30%, #e1e0ac 60%);
+    height: 100vh;
+}
+
+form {
+    height: 90%;
+    background-color: #e1e0ac;
+    border-radius: 20px;
+    box-shadow: 10px 10px 35px rgb(45, 43, 43), inset 5px 5px 50px white;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    opacity: 0;
+    /* Hace que el formulario esté inicialmente invisible */
+    animation: fadeIn 5s ease forwards;
+    /* Animación para hacer que aparezca gradualmente */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Estado inicial: completamente transparente */
+    }
+
+    to {
+        opacity: 1;
+        /* Estado final: completamente visible */
+    }
+}
+
+
+input {
+    width: 70%;
+    height: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px;
+    padding: 5px;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+h1 {
+    text-align: center;
+    opacity: 0;
+    /* Hace que el formulario esté inicialmente invisible */
+    animation: fadeIn 5s ease forwards;
+    /* Animación para hacer que aparezca gradualmente */
+}
+
+textarea {
+    border-radius: 20px;
+    width: 70%;
+    box-shadow: 5px 5px 30px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 1.1em;
+    height: 200px;
+
+}
+
+p {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.1em;
+}
+
+input[type="submit"] {
+    height: 40px;
+    margin-top: 5px;
+}
+
+.frog {
+    width: 300px;
+    /* Ancho de la rana */
+    height: 300px;
+    /* Altura de la rana */
+    background-image: url(./OIG3-fotor-bg-remover-2024030221947.png);
+    /* URL de la imagen de la rana */
+    background-size: contain;
+    position: absolute;
+    /* Posición absoluta para mover la rana */
+    bottom: 50px;
+    /* Posición inicial en la parte inferior */
+    left: calc(70% - -20px);
+    /* Centra horizontalmente */
+    animation: jump 3s ease-in-out infinite;
+    /* Animación de salto */
+    margin-bottom: -200px;
+}
+
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Posición inicial y final: sin desplazamiento vertical */
+    }
+
+    80% {
+        transform: translateY(-80px);
+        /* Posición en el medio: salto hacia arriba */
+    }
+}
+
+
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1200px) {
+    form {
+        width: 40%;
+    }
+
+    .frog {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+    form {
+        width: 60%;
+    }
+
+    .frog {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+    form {
+        width: 80%;
+    }
+
+    .frog {
+        width: 100px;
+        height: 100px;
+    }
+}
